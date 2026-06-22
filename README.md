@@ -26,7 +26,9 @@ A **portfolio rollup** aggregates all six. See [`STRATEGIES.md`](STRATEGIES.md) 
 
 ## Dashboard
 
-Open **[`docs/styles.html`](docs/styles.html)** — a tab per style with:
+Open **[`docs/styles.html`](docs/styles.html)** — it opens on a **📊 Performance (2y)** tab
+(monthly **P&L heatmap** by style + per-style win-rate / profit-factor / return / max-DD), then
+a tab per style with:
 - **Current signals**: entry / SL / T1 / T2 / R:R / qty / score / why
 - **Journal (past & present)**: every signal's life — `WATCHING → OPEN → CLOSED` — with P&L
 - **Equity curve** of realized P&L, win rate, monthly/yearly breakdown, 3-month health flag
@@ -66,8 +68,18 @@ python3 nse_screener/consolidate.py data/bhavcopy data/prices.parquet
 python3 nse_screener/style_screener.py --top 20
 python3 nse_screener/style_journal.py
 
+# 4) (optional) backtest the last ~2 years -> real triggered trades in the journal + the heatmap
+python3 nse_screener/style_backtest.py
+
 # open docs/styles.html
 ```
+
+### 2-year backtest & heatmap
+`style_backtest.py` replays each style's live rule across the price history and runs the
+signals through a realistic **capacity-constrained portfolio** (one ₹10L book per style, max K
+concurrent positions, 1% fixed-fractional risk, one position per symbol). It pushes the resulting
+closed/open trades into the journal and builds the monthly **P&L heatmap** (`data/style_backtest.json`).
+**CPR is intraday and is deliberately NOT P&L-backtested** on daily bars (its tab shows live levels only).
 
 Useful flags:
 ```bash

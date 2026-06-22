@@ -22,3 +22,4 @@ venv/
 
 # The dashboard (docs/styles.html) and docs/style_journal.json ARE committed —
 # they ship with data embedded so the page works straight from a clone / GitHub Pages.
+data/style_backtest.json
