@@ -1,0 +1,24 @@
+# Regenerated market data (rebuilt by the pipeline)
+data/prices.parquet
+data/bhavcopy/
+data/fundamentals.json
+data/financials.json
+data/styles/
+data/style_screens.json
+
+# Fyers credentials / tokens — NEVER commit
+data/.fyers.json
+data/.fyers_token.json
+data/.*.json
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Logs
+*.log
+
+# The dashboard (docs/styles.html) and docs/style_journal.json ARE committed —
+# they ship with data embedded so the page works straight from a clone / GitHub Pages.
