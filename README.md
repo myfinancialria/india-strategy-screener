@@ -1,8 +1,11 @@
 # 🎯 India Strategy Screener & Journal
 
+**🔗 Live dashboard: https://myfinancialria.github.io/india-strategy-screener/**
+
 Six legendary investing/trading playbooks, screened on the **Indian market** with
 **live FYERS prices** + **yfinance fundamentals**, each in its **own dashboard tab**,
 each tracked in a **journal** so you can see **past, present and future** performance.
+Styled to match [myfinancial.in](https://myfinancial.in) — *Know Your Money. Own Your Future.*
 
 > **Educational tooling for your own account. Not investment advice.** Always confirm a
 > live trigger, honour the stop, and consult a SEBI-registered advisor before risking capital.
